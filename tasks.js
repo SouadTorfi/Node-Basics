@@ -89,6 +89,11 @@ function exit(){
   process.exit();
 }
 
+/**
+ * List of command
+ *
+ * @returns {void}
+ */
 
 function help(){
 console.log('Option:\n -quite :Exits the application\n -exit :Exits the application\n -hello :print word hello\n -help :help command')
