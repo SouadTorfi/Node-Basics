@@ -37,9 +37,13 @@ function onDataReceived(text) {
   if (text === 'quit\n') {
     quit();
   }
+  else if(text === 'exit\n'){
+    exit();
+  }
   else if(text === 'hello\n'){
     hello();
   }
+
   else{
     unknownCommand(text);
   }
@@ -77,6 +81,11 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+function exit(){
+  console.log('exiting now, goodbye!')
+  process.exit();
+}
+
 
 // The following line starts the application
 startApp("Souad Torfi")
