@@ -51,8 +51,12 @@ function onDataReceived(text) {
     HELLO(text.slice(5));
   }
   else if(text === 'array\n'){
-    arraylist();
+    list();
   }
+  else if(text.trim().split(" ")[0] === 'add'){
+    add(text);
+  }
+
 
   else{
     unknownCommand(text);
@@ -114,13 +118,15 @@ function HELLO(name){
 
 }
 //array
-let list=["blue","orange","red","yellow"]
-function arraylist(){
-  for(i=0;i<=list.length-1;i++){
-    console.log(list[i])
-  }
-}
 
+let tasks = ['orange', 'red']
+function list(){
+  tasks.forEach((element,index) => {
+    console.log(`${index}-${tasks[index]}`)
+  });
+
+}
+//arrayadd
 
 
 // The following line starts the application
