@@ -46,6 +46,9 @@ function onDataReceived(text) {
   else if(text === 'help\n'){
     help();
   }
+  else if(text.slice(0,5) === 'hello'){
+    HELLO(text.slice(5));
+  }
 
   else{
     unknownCommand(text);
@@ -72,6 +75,7 @@ function unknownCommand(c){
  */
 function hello(){
   console.log('hello!')
+
 }
 
 
@@ -100,6 +104,11 @@ console.log('Option:\n -quite :Exits the application\n -exit :Exits the applicat
 
 }
 
+function HELLO(name){
+  let n = name.trim();
+  console.log(('hello ' + n.replace("\n","")+"!"))
+
+}
 
 // The following line starts the application
 startApp("Souad Torfi")
