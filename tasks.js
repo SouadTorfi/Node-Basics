@@ -106,7 +106,7 @@ console.log('Option:\n -quite :Exits the application\n -exit :Exits the applicat
 
 function HELLO(name){
   let n = name.trim();
-  console.log(('hello ' + n.replace("\n","")+"!"))
+  console.log(('hello ' + n +"!"))
 
 }
 
