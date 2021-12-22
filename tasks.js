@@ -127,7 +127,20 @@ function list(){
 
 }
 //arrayadd
+function add(text){
 
+  let n=text.slice(4);
+  if(n.length > 0){
+  tasks.push(n.trim());
+  console.log(n);
+
+  }else{
+
+    console.log('you need to add a value')
+ 
+
+  }
+}
 
 // The following line starts the application
 startApp("Souad Torfi")
