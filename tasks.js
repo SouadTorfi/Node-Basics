@@ -18,6 +18,7 @@ function startApp(name){
 }
 
 
+
 /**
  * Decides what to do depending on the data that was received
  * This function receives the input sent by the user.
@@ -48,6 +49,9 @@ function onDataReceived(text) {
   }
   else if(text.slice(0,5) === 'hello'){
     HELLO(text.slice(5));
+  }
+  else if(text === 'array\n'){
+    arraylist();
   }
 
   else{
@@ -108,6 +112,13 @@ function HELLO(name){
   let n = name.trim();
   console.log(('hello ' + n +"!"))
 
+}
+//array
+let list=["blue","orange","red","yellow"]
+function arraylist(){
+  for(i=0;i<=list.length-1;i++){
+    console.log(list[i])
+  }
 }
 
 
