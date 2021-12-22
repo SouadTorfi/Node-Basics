@@ -100,7 +100,7 @@ function exit(){
  */
 
 function help(){
-console.log('Option:\n -quite :Exits the application\n -exit :Exits the application\n -hello :print word hello\n -help :help command')
+console.log('Option:\n -quite :Exits the application\n -exit :Exits the application\n -hello :print word hello!\n -help :help command\n -hello x :print hello x! ex: hello souad -> print hello souad!')
 
 }
 
