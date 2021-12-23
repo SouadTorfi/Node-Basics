@@ -56,13 +56,13 @@ function onDataReceived(text) {
   else if(text.trim().split(" ")[0] === 'add'){
     add(text);
   }
-  else if(text === 'last\n'){
+  else if(text === 'remove\n'){
     last();
   }
-  else if(text === 'second\n'){
+  else if(text === 'remove 2\n'){
     second();
   }
-  else if(text === 'first\n'){
+  else if(text === 'remove 1\n'){
     first();
   }
   else{
