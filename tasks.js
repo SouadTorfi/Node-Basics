@@ -115,7 +115,7 @@ function exit(){
  */
 
 function help(){
-console.log('Option:\n -quite :Exits the application\n -exit :Exits the application\n -hello :print word hello!\n -help :help command\n -hello x :print hello x! ex: hello souad -> print hello souad!')
+console.log('Option:\n -quite :Exits the application\n -exit :Exits the application\n -hello :print word hello!\n -help :help command\n -hello x :print hello x! ex: hello souad -> print hello souad! -array :show the elements\n -add :add element to your array\n -remove :remove last elements from your array\n -remove 1:remove first element\n -remove 2:remove second element')
 
 }
 
