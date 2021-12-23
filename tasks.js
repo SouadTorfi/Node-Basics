@@ -56,8 +56,15 @@ function onDataReceived(text) {
   else if(text.trim().split(" ")[0] === 'add'){
     add(text);
   }
-
-
+  else if(text === 'last\n'){
+    last();
+  }
+  else if(text === 'second\n'){
+    second();
+  }
+  else if(text === 'first\n'){
+    first();
+  }
   else{
     unknownCommand(text);
   }
@@ -119,7 +126,7 @@ function HELLO(name){
 }
 //array
 
-let tasks = ['orange', 'red']
+let tasks = ['orange','red','blue','green']
 function list(){
   tasks.forEach((element,index) => {
     console.log(`${index}-${tasks[index]}`)
@@ -137,10 +144,30 @@ function add(text){
   }else{
 
     console.log('you need to add a value')
- 
+
 
   }
 }
 
+
+//delete last elem
+function last(){
+  tasks.pop();
+  console.log(tasks);
+}
+
+//remove second elem
+
+function second(){
+ 
+    tasks.splice(1,1) ;
+     console.log(tasks);
+}
+
+//remove first element
+function first(){
+  tasks.shift() ;
+   console.log(tasks);
+}
 // The following line starts the application
 startApp("Souad Torfi")
