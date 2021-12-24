@@ -56,14 +56,17 @@ function onDataReceived(text) {
   else if(text.trim().split(" ")[0] === 'add'){
     add(text);
   }
-  else if(text === 'remove\n'){
-    last();
-  }
-  else if(text === 'remove 2\n'){
-    second();
-  }
-  else if(text === 'remove 1\n'){
-    first();
+  // else if(text === 'remove\n'){
+  //   last();
+  // }
+  // else if(text === 'remove 2\n'){
+  //   second();
+  // }
+  // else if(text === 'remove 1\n'){
+  //   first();
+  // }
+  else if(text.trim().split(" ")[0] == 'remove'){
+    remove(text.trim().split(" ")[1]);
   }
   else{
     unknownCommand(text);
@@ -139,7 +142,7 @@ function add(text){
   let n=text.slice(4);
   if(n.length > 0){
   tasks.push(n.trim());
-  console.log(n);
+  console.log(tasks);
 
   }else{
 
@@ -150,24 +153,40 @@ function add(text){
 }
 
 
-//delete last elem
-function last(){
-  tasks.pop();
-  console.log(tasks);
-}
+// //delete last elem
+// function last(){
+//   tasks.pop();
+//   console.log(tasks);
+// }
 
-//remove second elem
+// //remove second elem
 
-function second(){
+// function second(){
  
-    tasks.splice(1,1) ;
-     console.log(tasks);
-}
+//     tasks.splice(1,1) ;
+//      console.log(tasks);
+// }
 
-//remove first element
-function first(){
-  tasks.shift() ;
-   console.log(tasks);
-}
+// //remove first element
+// function first(){
+//   tasks.shift() ;
+//    console.log(tasks);
+// }
+//better remove
+
+function remove(item){
+
+  for(i=0;i<tasks.length;i++){
+    if(item == i){
+     tasks.splice(i,1);
+     console.log(tasks)
+    }
+  }if(item > i){
+
+    console.log('Element Not Found')
+
+
+  }}
+
 // The following line starts the application
 startApp("Souad Torfi")
