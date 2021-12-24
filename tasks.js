@@ -187,7 +187,7 @@ function remove(item){
 
   for(i=0;i<tasks.length;i++){
     if(item == i){
-     tasks.splice(i,1);
+     tasks.splice((i-1),1);
      console.log(tasks)
     }
   }if(item > i){
