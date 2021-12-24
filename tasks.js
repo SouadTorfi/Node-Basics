@@ -68,6 +68,9 @@ function onDataReceived(text) {
   else if(text.trim().split(" ")[0] == 'remove'){
     remove(text.trim().split(" ")[1]);
   }
+  else if (text.trim().split(" ")[0] === "edit") {
+    edit(text);
+  }
   else{
     unknownCommand(text);
   }
@@ -187,6 +190,20 @@ function remove(item){
 
 
   }}
+  //edit
+  function edit(item) {
+    var oldItem = item.trim().split(" ")[1];
+    var newItem = item.trim().split(" ")[2];
+  
+    if (oldItem == undefined && newItem == undefined) {
+      console.log("error");
+    } else {
+      tasks[oldItem - 1] = newItem;
+      console.log(tasks)
+    }
+  }
+  
+  
 
 // The following line starts the application
 startApp("Souad Torfi")
