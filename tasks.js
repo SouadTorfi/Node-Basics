@@ -71,6 +71,12 @@ function onDataReceived(text) {
   else if (text.trim().split(" ")[0] === "edit") {
     edit(text);
   }
+  else if (text.trim().split(" ")[0] === "check") {
+    check(text.trim().substring(5));
+  }
+  else if (text.trim().split(" ")[0] === "uncheck") {
+    uncheck(text.trim().substring(7));
+  }
   else{
     unknownCommand(text);
   }
@@ -201,6 +207,28 @@ function remove(item){
       tasks[oldItem - 1] = newItem;
       console.log(tasks)
     }
+  }
+  //check
+  function check(task) {
+    task.trim()
+    if (task.length == 0) {
+      console.log("Choose a value of elem")
+      return
+    }
+    if (Number(task) >= 1 && Number(task) <= tasks.length) {
+      var valuee=tasks[task-1];
+      tasks.splice(task - 1, 1,  `[✓] ${(valuee)} `)
+  
+      console.log(tasks)
+      return;
+    }
+    console.log("No element has this number");
+
+  }
+  
+  //uncheck
+  function uncheck(task) {
+   
   }
   
   
